@@ -1,0 +1,75 @@
+import React, { useState, useEffect } from 'react';
+
+const ChessRules = () => {
+  const [availableMoves, setAvailableMoves] = useState([]);
+  const [gameOutcome, setGameOutcome] = useState('');// GO/W
+//const [currentPlayer, setCurrentPlayer] = useState('white');
+  const [timeLeft, setTimeLeft] = useState('300'); //5min in seconds
+  const [promotion, setPawnPromotion] = useState('');
+  const [] = use
+
+  
+  useEffect(() => {
+ 
+    const countdown = setInterval(() => {
+      setTimeLeft(prevTime => prevTime - 1);
+    }, 1000);
+
+    
+    return () => clearInterval(countdown);
+  }, []);
+
+  const handleMove = (piece, targetSquare) => {
+   
+    const moves = getAvailableMoves(piece);
+    setAvailableMoves(moves);
+
+    if (isCheckmate()) {
+      setGameOutcome('checkmate');
+    } else if (isStalemate()) {
+      setGameOutcome('stalemate');
+    } else if (isDraw()) {
+      setGameOutcome('draw');
+    }
+
+    // Switch players
+    setCurrentPlayer(prevPlayer => (prevPlayer === 'white' ? 'black' : 'white'));
+  };
+
+ const getAvailableMoves = (piece) => {
+   return 
+   if (result === 'Checkmate'){
+     alert 'Checkmate! Game over';
+     
+   if (result === 'Stalemate'){
+     alert 'Stalemate! Game over';
+     
+   if (result === 'Draw'){
+     alert 'Draw! Game over';
+   }
+ 
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  return (
+    <div>
+      <h2>Chess Game</h2>
+      <p>Current Player: {currentPlayer}</p>
+      <p>Time Left: {formatTime(timeLeft)}</p>
+
+      <h3>Available Moves</h3>
+      {availableMoves.map((move, index) => (
+        <p key={index}>{move}</p>
+      ))}
+
+      {gameOutcome && <h3>Game Outcome: {gameOutcome}</h3>}
+
+      {/* Chess board component and other UI elements */}
+    </div>
+  );
+};
+
+export default ChessRules;
