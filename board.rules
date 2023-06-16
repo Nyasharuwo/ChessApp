@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ChessRules = () => {
   const [availableMoves, setAvailableMoves] = useState([]);
-  const [gameOutcome, setGameOutcome] = useState('');// GO/W
+  const [gameOutcome, setGameOutcome] = useState('');
 //const [currentPlayer, setCurrentPlayer] = useState('white');
   const [timeLeft, setTimeLeft] = useState('300'); //5min in seconds
   const [promotion, setPawnPromotion] = useState('');
