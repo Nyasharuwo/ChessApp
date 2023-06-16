@@ -1,0 +1,19 @@
+.Box {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  color: rgb(184, 184, 184);
+  justify-content: center;
+  align-items: center;
+}
+
+.Black {
+  background-color: rgb(70, 84, 70);
+}
+
+.Piece svg {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
