@@ -6,7 +6,7 @@ const ChessRules = () => {
 //const [currentPlayer, setCurrentPlayer] = useState('white');
   const [timeLeft, setTimeLeft] = useState('300'); //5min in seconds
   const [promotion, setPawnPromotion] = useState('');
-  const [] = use
+  
 
   
   useEffect(() => {
@@ -47,6 +47,14 @@ const ChessRules = () => {
    if (result === 'Draw'){
      alert 'Draw! Game over';
    }
+
+//const resetPiecesInitialPosition = () => {
+//setGameOver(false);
+//setBoard(Array(64).fill(piecesInitialPosition));
+//};
+
+
+
  
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
