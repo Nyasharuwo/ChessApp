@@ -11,7 +11,7 @@ function App() {
  // const [chatMessages, setChatMessages] = useState([]);
  //  const [message, setMessage] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
    
     socket.on("board", (updatedBoard) => {
       setBoard(updatedBoard);
@@ -24,7 +24,7 @@ function App() {
     socket.on("chatMessage", (message) => {
       setChatMessages((prevMessages) => [...prevMessages, message]);
     });
-    
+    */
   return (
     <div className="App">
       <Board
